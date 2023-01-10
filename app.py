@@ -9,5 +9,9 @@ def my_app():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/login')
+def login():
+    return render_template('pages-login.html')
 
-app.run(debug="True")
+
+app.run(debug="True",port='4004')
