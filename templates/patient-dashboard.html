@@ -35,26 +35,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-    nav a {
-        color: #d64161;
-        font-size: 3em;
-        margin-left: 50px;
-        text-decoration: none;
-    }
-
-    .book {
-        padding: 20px;
-        margin: 10px;
-        background-color: #f7f4f4;
-    }
-
-    .review {
-            margin-left: 50px;
-            font-size: 20px;
-    }
-
-</style>
 </head>
 
 <body>
@@ -63,9 +43,9 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="{{ url_for('static',filename='assets1/img/logo.png')}}" alt="">
-        <span class="d-none d-lg-block">Patient</span>
+        <span class="d-none d-lg-block">स्वास्थ्य संवाद</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -244,11 +224,12 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="/profile">
                 <i class="bi bi-person"></i>
-                <span>My Profile</span>
+                <span>Doctor's Profile</span>
               </a>
             </li>
+            
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -562,15 +543,15 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Due-Date</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-cart"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6>183 days Remaining</h6>
+                      <span class="text-success small pt-1 fw-bold">Expected due:-2023-08-09</span> <span class="text-muted small pt-2 ps-1"></span>
 
                     </div>
                   </div>
@@ -597,15 +578,17 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Revenue <span>| This Month</span></h5>
+                  <h5 class="card-title">Upcoming Appointments <span></span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>$3,264</h6>
-                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6>Next appointment</h6>
+                      <h7>2021-02-09</h7><br>
+                      <!-- <h6>Recent appointment: 2021-01-01</h6> -->
+                      <span class="text-success small pt-1 fw-bold">Recent Appointment</span> <span class="text-muted small pt-2 ps-1">2021-02-02</span>
 
                     </div>
                   </div>
@@ -633,17 +616,62 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Customers <span>| This Year</span></h5>
+                  <h5 class="card-title">Reports <span>                       <div class="row mb-3">
+                    <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" type="file" id="hello">
+
+                      <button onclick="myFun()" type="button" class="btn btn-outline-success" id="btn"> post</button>
+
+
+                      
+                    </div></span></h5>
+
+                    <script>
+                      const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function handleClick(event) {
+  // 👇️ if you are submitting a form (prevents page reload)
+  event.preventDefault();
+
+  const firstNameInput = document.getElementById('hello');
+
+  // Send value to server
+  console.log(firstNameInput.value);
+
+  // 👇️ clear input field
+  firstNameInput.value = '';
+});
+
+
+
+                    </script>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
-                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+
+                      <span class="text-danger small pt-1 fw-bold"> reports &ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="text-muted small pt-2 ps-1"><a href="/static/assets1/img/messages-1.jpg">2021-02-02</a></span><br>
+                      <span class="text-danger small pt-1 fw-bold">Reports&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="text-muted small pt-2 ps-1"><a href="/static/assets1/img/messages-1.jpg">2000-09-12</a></span><br>
+                      <span class="text-danger small pt-1 fw-bold" id="non">Report3&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="text-muted small pt-2 ps-1"><a id="non2" href="/static/assets1/img/messages-1.jpg">2020-09-12</a></span>
+
+                      
+                     
+
+
+
+                  
+
+
+
+
 
                     </div>
+                    
+
+                    
                   </div>
 
                 </div>
@@ -651,6 +679,29 @@
 
             </div><!-- End Customers Card -->
 
+            <style>
+              #non {
+display: none;
+}
+
+
+#non2 {
+display: none;
+}
+            </style>
+<script>
+
+
+function myFun() {
+  var x = document.getElementById("non");
+  x.style.display = "inline";
+
+  var x = document.getElementById("non2");
+  x.style.display = "inline";
+}
+
+
+</script>
             <!-- Reports -->
             <div class="col-12">
               <div class="card">
@@ -674,7 +725,7 @@
                   <!-- Line Chart -->
                   <div id="reportsChart"></div>
 
-                  <script>
+                  <!-- <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new ApexCharts(document.querySelector("#reportsChart"), {
                         series: [{
@@ -725,7 +776,77 @@
                         }
                       }).render();
                     });
+                  </script> -->
+
+
+
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      const arrasy= [31, 40, 28, 51, 42, 82, 56,12,23,34,56,34]
+                      for (let i = 0; i < arrasy.length; i++) {
+                            arrasy[i] = arrasy[i]*2 ;
+                                                      }
+                      new ApexCharts(document.querySelector("#reportsChart"), {
+                        series: [{
+                          name: 'Sales',
+                          
+                          data: [31, 40, 28, 51, 42, 82, 56,12,23,34,56,34],
+                        }, {
+                          name: 'Revenue',
+                          data: arrasy
+                        }, {
+                          name: 'Customers',
+                          data: [15, 11, 32,42, 82, 56,12,23,34,56, 18, 9]
+                        }],
+                        chart: {
+                          height: 350,
+                          type: 'area',
+                          
+                        },
+                        markers: {
+                          size: 4
+                        },
+                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                        fill: {
+                          type: "gradient",
+                          gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.3,
+                            opacityTo: 0.4,
+                            stops: [0, 90, 100]
+                          }
+                        },
+                        dataLabels: {
+                          enabled: false
+                        },
+                        stroke: {
+                          curve: 'smooth',
+                          width: 2
+                        },
+                        xaxis: {
+                        categories: [1,2,3,4,5,6,7,8,9,10,11,12],
+                        title: {
+                        text: 'Weeks',
+                        offsetY:60
+          }
+        },
+        
+        yaxis: {
+          title: {
+            text: 'Weight'
+            
+          },
+          min: 30,
+          max: 110
+        },
+        
+                        
+                        
+                      }).render();
+                    });
                   </script>
+
                   <!-- End Line Chart -->
 
                 </div>
@@ -734,7 +855,7 @@
             </div><!-- End Reports -->
 
             <!-- Recent Sales -->
-            <div class="col-12">
+            <!-- <div class="col-12">
               <div class="card recent-sales overflow-auto">
 
                 <div class="filter">
@@ -751,7 +872,7 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Recent Sales <span></span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -805,10 +926,10 @@
                 </div>
 
               </div>
-            </div><!-- End Recent Sales -->
+            </div>End Recent Sales -->
 
             <!-- Top Selling -->
-            <div class="col-12">
+            <!-- <div class="col-12">
               <div class="card top-selling overflow-auto">
 
                 <div class="filter">
@@ -879,7 +1000,7 @@
                 </div>
 
               </div>
-            </div><!-- End Top Selling -->
+            </div>End Top Selling -->
 
           </div>
         </div><!-- End Left side columns -->
@@ -903,12 +1024,12 @@
             </div>
 
             <div class="card-body">
-              <h5 class="card-title">Recent Activity <span>| Today</span></h5>
+              <h5 class="card-title">Timeline <span>| First Trimester</span></h5>
 
               <div class="activity">
 
                 <div class="activity-item d-flex">
-                  <div class="activite-label">32 min</div>
+                  <div class="activite-label">Day 15</div>
                   <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
                   <div class="activity-content">
                     Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
@@ -916,7 +1037,7 @@
                 </div><!-- End activity item-->
 
                 <div class="activity-item d-flex">
-                  <div class="activite-label">56 min</div>
+                  <div class="activite-label">Day 30</div>
                   <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
                   <div class="activity-content">
                     Voluptatem blanditiis blanditiis eveniet
@@ -924,7 +1045,7 @@
                 </div><!-- End activity item-->
 
                 <div class="activity-item d-flex">
-                  <div class="activite-label">2 hrs</div>
+                  <div class="activite-label">Day 45</div>
                   <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
                   <div class="activity-content">
                     Voluptates corrupti molestias voluptatem
@@ -932,7 +1053,7 @@
                 </div><!-- End activity item-->
 
                 <div class="activity-item d-flex">
-                  <div class="activite-label">1 day</div>
+                  <div class="activite-label">Day 60</div>
                   <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
                   <div class="activity-content">
                     Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
@@ -940,7 +1061,7 @@
                 </div><!-- End activity item-->
 
                 <div class="activity-item d-flex">
-                  <div class="activite-label">2 days</div>
+                  <div class="activite-label">Day 75</div>
                   <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
                   <div class="activity-content">
                     Est sit eum reiciendis exercitationem
@@ -948,20 +1069,20 @@
                 </div><!-- End activity item-->
 
                 <div class="activity-item d-flex">
-                  <div class="activite-label">4 weeks</div>
+                  <div class="activite-label">Day 90</div>
                   <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
                   <div class="activity-content">
                     Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
                   </div>
                 </div><!-- End activity item-->
-
+                </div><!-- End activity item-->
               </div>
 
             </div>
           </div><!-- End Recent Activity -->
 
           <!-- Budget Report -->
-          <div class="card">
+          <!-- <div class="card">
             <div class="filter">
               <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
               <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -969,9 +1090,9 @@
                   <h6>Filter</h6>
                 </li>
 
-                <li><a class="dropdown-item" href="#">Today</a></li>
-                <li><a class="dropdown-item" href="#">This Month</a></li>
-                <li><a class="dropdown-item" href="#">This Year</a></li>
+                <li><a class="dropdown-item" href="#">First Trimester</a></li>
+                <li><a class="dropdown-item" href="#">Second Trimester</a></li>
+                <li><a class="dropdown-item" href="#">Third Trimester</a></li>
               </ul>
             </div>
 
@@ -1032,7 +1153,7 @@
               </script>
 
             </div>
-          </div><!-- End Budget Report -->
+          </div>End Budget Report -->
 
           <!-- Website Traffic -->
           <div class="card">
@@ -1128,38 +1249,65 @@
             </div>
 
             <div class="card-body pb-0">
-              <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
+              <h5 class="card-title">Pregnancy at week 28 </h5>
 
               <div class="news">
-                <div class="post-item clearfix">
+                <div class="post-item clearfix" >
                   <img src="assets1/img/news-1.jpg" alt="">
-                  <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-                  <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+                  <h4 class=""><a href="#">Your baby
+                  </a></h4>
+                  <div class="expanded-text">
+                    <p class="text">
+                      <span class="short-name">Your baby now measures about 37cm from the top of</span>
+                      <span class="longer-name">Your baby now measures about 37cm from the top of their head to their toes, and weighs about 1kg. Their body is now in proportion with their head and their face has filled out, so they look more like a normal baby.
+
+                        They are putting on weight rapidly and have less room to move around. They may be in the breech position at this stage, with their head up and their bottom down. Don’t worry though - most babies will move into the head-down position by the time they are born.
+                        
+                        Your baby's heartbeat can be heard through a stethoscope, and your partner might even be able to hear it by putting their ear to your tummy, although it’s difficult to find the right place.
+                        
+                        Their lungs have developed enough for them to breathe outside the uterus – although they would probably need some help. If they were born now, your baby would have a good chance of surviving, although there would still be a high risk of disability.</span>
+                    </p>
+                  </div>
+                  
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="assets1/img/news-2.jpg" alt="">
-                  <h4><a href="#">Quidem autem et impedit</a></h4>
-                  <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
+                  <h4><a href="#">Your body</a></h4>
+                  <div class="expanded-text">
+                    <p class="text">
+                      <span class="short-name">Congratulations - you have reached the third trimester!</span>
+                      <span class="longer-name">Congratulations - you have reached the third trimester! As the birth gets nearer, you will probably start seeing your doctor or midwife for antenatal appointments every 2 weeks.
+
+                        Many women find things get more uncomfortable in their third trimester. You might have back pain and leg cramps, indigestion and heartburn, and your hands and feet might get quite swollen. It’s a good idea to take off any tight jewellery and put your feet up as often as you can.
+                        
+                        You should sleep on your side as your pregnancy progresses, especially from 28 weeks. Lying on your back puts pressure on major blood vessels. This can reduce the flow of blood to your womb, and restrict your baby’s oxygen supply. Research has shown that sleeping on your side can reduce the risk of stillbirth by half.
+                        
+                        </span>
+                    </p>
+                  </div>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="assets1/img/news-3.jpg" alt="">
-                  <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
-                  <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
+                  <h4><a href="#">Things to remember</a></h4>
+                  <!-- <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p> -->
+                  
+                  <div class="expanded-text">
+                    <p class="text">
+                      <span class="short-name">If your blood is Rhesus (Rh) negative, you will need </span>
+                      <span class="longer-name">If your blood is Rhesus (Rh) negative, you will need to have an injection now to protect your baby against Rhesus disease. If you are Rh-negative and your baby is Rh-positive, then you can produce antibodies that attack the baby’s blood. This can make them very sick. It can be prevented by having an injection called the anti-D injection. You need this injection now and then again at your 34 to 36 week check-up.
+
+                        If you haven’t had it already, you may also be offered a Glucose Tolerance test to check whether you have gestational diabetes at 28 weeks.
+                        
+                        </span>
+                    </p>
+                  </div>
+
+
                 </div>
 
-                <div class="post-item clearfix">
-                  <img src="assets1/img/news-4.jpg" alt="">
-                  <h4><a href="#">Laborum corporis quo dara net para</a></h4>
-                  <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets1/img/news-5.jpg" alt="">
-                  <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
-                  <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
-                </div>
+               
 
               </div><!-- End sidebar recent posts-->
 

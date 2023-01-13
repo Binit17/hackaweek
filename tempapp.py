@@ -14,12 +14,25 @@ def get_db_connection():
     return conn
 
 @app.route('/')
-def home():
-    return render_template('index.html')
+def homebeforelogin():
+    return render_template('homebeforelogin.html')
+
+@app.route('/home')
+def homeafterlogin():
+    return render_template('homeafterlogin.html')
 
 @app.route('/patient-dashboard')
 def patientProfile():
     return render_template('patient-dashboard.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 
 @app.route('/doctor')  #this is to send the appointment list to the doctor's profile.
@@ -30,7 +43,7 @@ def doctor():
     patient = cur.fetchall()
     cur.close()
     conn.close()
-    return render_template('doctor-dashboard.html',patient=patient)
+    return render_template('docprofile.html',patient = patient)
 
 @app.route('/finddoctors',methods=('GET','POST'))
 def finddoctors():
@@ -79,4 +92,4 @@ def appointment():
 
     return render_template('appointment-form.html')
 
-app.run(debug=True,port=5013)
+app.run(debug=True,port=5016)
