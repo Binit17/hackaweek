@@ -87,9 +87,9 @@ def appointment():
         conn.commit()
         cur.close()
         conn.close()
-        return redirect(url_for('doctor'))
+        return redirect(url_for('patientProfile'))
 
 
     return render_template('appointment-form.html')
 
-app.run(debug=True,port=5016)
+app.run(debug=True,port=9696)
