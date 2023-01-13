@@ -13,11 +13,16 @@ def get_db_connection():
     
     return conn
 
-@app.route('/index')
+@app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/doctor')
+@app.route('/patient-dashboard')
+def patientProfile():
+    return render_template('patient-dashboard.html')
+
+
+@app.route('/doctor')  #this is to send the appointment list to the doctor's profile.
 def doctor():
     conn=get_db_connection()
     cur=conn.cursor()
@@ -27,8 +32,8 @@ def doctor():
     conn.close()
     return render_template('doctor-dashboard.html',patient=patient)
 
-@app.route('/',methods=('GET','POST'))
-def docprofile():
+@app.route('/finddoctors',methods=('GET','POST'))
+def finddoctors():
     if request.method == 'POST':
         #this is for filtering doctor
         location = 'kathmandu'
